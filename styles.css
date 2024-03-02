@@ -14,6 +14,16 @@
     font-weight: 400;
 }
 
+.light-mode {
+    --background-color: #e1e1e3;
+    --text-color: #323437;
+    --text-alt-color: #aaaeb2;
+    --main-color: #e2b714;
+    --sub-color: #d1d3d9;
+    --sub-alt-color: #aaaeb2;
+    --error-color: #FA1616;
+}
+
 @font-face {
     font-family: Lexend Deca;
     font-style: normal;
