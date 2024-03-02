@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap');
+
+:root {
+    --background-color: #323437;
+    --text-color: #d1d0c5;
+    --text-alt-color: #646669;
+    --main-color: #e2b714;
+    --sub-color: #2c2e31;
+    --sub-alt-color: #646669;
+    --error-color: #da3333;
+}
+
+@font-face {
+    font-family: Lexend Deca;
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(./assets/LexendDeca-Regular.ttf) format("truetype")
+}
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto Mono', monospace;
+    min-height: 100vh;
+    transition: all .5s;
+    user-select: none;
+}
+
+.container {
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-rows: 50px 1fr 100px;
+    gap: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+header .logo img {
+    width: 40px;
+    height: 24px;
+    color: var(--main-color);
+}
+
+header .logo h1 {
+    font-size: 1.9rem;
+    margin-top: -8px;
+    position: relative;
+    letter-spacing: 1px;
+    font-family: Lexend Deca, sans-serif;
+    font-weight: 550;
+}
+
+header .logo h1::before {
+    content: ' monkey see';
+    font-size: 10px;
+    position: absolute;
+    padding-left: 5px;
+    word-spacing: -1px;
+    letter-spacing: 0;
+    font-family: Lexend Deca, sans-serif;
+    color: var(--text-alt-color);
+}
+
+nav{
+    font-size: 1rem;
+    line-height: 1rem;
+    color: var(--sub-alt-color);
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.5rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    width: 100%;
+    grid-template-columns: auto auto auto auto 1fr auto;
+    margin-left: .7rem;
+}
+
