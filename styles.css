@@ -8,6 +8,10 @@
     --sub-color: #2c2e31;
     --sub-alt-color: #646669;
     --error-color: #da3333;
+    --roundness: .5rem;
+    --font: "Roboto Mono", "Vazirmatn", monospace;
+    scroll-padding-top: 2rem;
+    font-weight: 400;
 }
 
 @font-face {
@@ -26,7 +30,7 @@
 body{
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: 'Roboto Mono', monospace;
+    font-family: var(--font);
     min-height: 100vh;
     transition: all .5s;
     user-select: none;
@@ -94,3 +98,158 @@ nav{
     margin-left: .7rem;
 }
 
+footer {
+    position: relative;
+    text-align: center;
+    line-height: 1rem;
+    font-size: .75rem;
+    color: var(--sub-alt-color);
+    margin: -.5em
+}
+
+footer .keyTips {
+    transition: .125s;
+    margin-bottom: 2em;
+    line-height: 2
+}
+
+footer .keyTips key {
+    margin: 0 .25rem
+}
+
+footer #commandLineMobileButton {
+    display: none;
+    top: -4rem;
+    left: 0;
+    position: absolute;
+    font-size: 1rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    background: var(--main-color);
+    border-radius: 99rem;
+    z-index: 99;
+    cursor: pointer;
+    color: var(--background-color);
+    transition: .25s
+}
+
+footer .leftright {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    display: grid;
+    grid-template-columns: auto auto
+}
+
+footer .leftright .textButton {
+    text-decoration: none;
+    font-size: .75rem;
+    line-height: 1rem;
+    padding: .25em .5em
+}
+
+footer .leftright .left {
+    text-align: left;
+    display: grid;
+    grid-auto-flow: column;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+footer .leftright .right {
+    text-align: right;
+    display: grid;
+    grid-auto-flow: column;
+    width: -moz-fit-content;
+    width: fit-content;
+    justify-self: right
+}
+
+footer .leftright .left .textButton,
+footer .leftright .right .textButton {
+    display: grid;
+    grid-auto-flow: column;
+    gap: .25rem;
+    align-items: baseline;
+    width: -moz-available;
+    width: -moz-max-content;
+    width: max-content
+}
+
+footer .currentVersion {
+    display: flex
+}
+
+footer .currentVersion #newVersionIndicator {
+    margin: 0;
+    font-size: unset;
+    background-color: var(--main-color);
+    border-radius: calc(var(--roundness)/2);
+    color: var(--background-color);
+    text-align: center;
+    cursor: pointer;
+    transition: .125s
+}
+
+footer.focus .keyTips {
+    opacity: 0 !important
+}
+
+footer.focus .textButton {
+    opacity: 0 !important
+}
+
+footer.focus #newVersionIndicator {
+    opacity: 0 !important
+}
+
+footer.focus #commandLineMobileButton {
+    opacity: 0 !important;
+    pointer-events: none !important
+}
+
+footer a{
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--sub-alt-color);
+}
+
+key {
+    color: var(--background-color);
+    background-color: var(--sub-alt-color);
+    padding: .1rem .3rem;
+    margin: 0 .5rem;
+    border-radius: .1rem;
+    display: inline-block;
+    font-size: .7rem;
+    line-height: .7rem
+}
+
+.textButton {
+    color: var(--sub-alt-color);
+    cursor: pointer;
+    transition: background .125s, color .125s, opacity .125s;
+    padding: .5em;
+    border-radius: var(--roundness);
+    background: 0 0;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    align-content: center;
+    height: -moz-min-content;
+    height: min-content;
+    line-height: 1.25;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1em;
+    display: inline-flex;
+    gap: .5em;
+    align-items: baseline;
+    justify-content: center
+}
