@@ -28,26 +28,75 @@
             </nav>
         </header>
         <main>
-            
+          <div class="test-config-result">
+            <div class="test-config">
+                <div class="config" id="config1">
+                    <div class="button">
+                        <input type="checkbox" id="punctuation" name="include-to-test" value="punctuation">
+                        <label for="punctuation"><i class="fa-solid fa-at"></i> punctuation</label>
+                    </div>
+                    <div class="button">
+                        <input type="checkbox" id="numbers" name="include-to-test" value="numbers">
+                        <label for="numbers"><i class="fa-solid fa-hashtag"></i> numbers</label>
+                    </div>
+                </div>
+                <div class="spelter"></div>
+                <div class="config" id="config2">
+                    <div class="button">
+                        <input type="radio" id="time" name="test-by" value="time" checked>
+                        <label for="time"><i class="fa-solid fa-clock"></i> time</label>
+                    </div>
+                    <div class="button">
+                        <input type="radio" id="words" name="test-by" value="words">
+                        <label for="words"><i class="fa-solid fa-a"></i> words</label>
+                    </div>
+                    <div class="button">
+                        <input type="radio" id="quote" name="test-by" value="quote">
+                        <label for="quote"><i class="fas fa-fw fa-quote-left"></i> quote</label>
+                    </div>
+                    <div class="button">
+                        <input type="radio" id="zen" name="test-by" value="zen">
+                        <label for="zen"><i class="fas fa-fw fa-mountain"></i> zen</label>
+                    </div>
+                    <div class="button">
+                        <input type="radio" id="custom" name="test-by" value="custom">
+                        <label for="custom"><i class="fas fa-fw fa-wrench"></i> custom</label>
+                    </div>
+                </div>
+                <div class="spelter"></div>
+                <div class="config" id="config3">
+                    <div class="time-word-config">
+                        <input type="radio" id="15" name="time-word-config" value="15">
+                        <label for="15">15</label>
+                    </div>
+                    <div class="time-word-config">
+                        <input type="radio" id="30" name="time-word-config" value="30">
+                        <label for="30">30</label>
+                    </div>
+                    <div class="time-word-config">
+                        <input type="radio" id="60" name="time-word-config" value="60" checked>
+                        <label for="60">60</label>
+                    </div>
+                    <div class="time-word-config">
+                        <input type="radio" id="100" name="time-word-config" value="100">
+                        <label for="100">120</label>
+                    </div>
+                    
+                </div>
+                <div class="textButton" id="custom">
+                        <i class="fas fa-fw fa-tools"></i>
+                </div>
+            </div>
+          </div>
         </main>
         <footer>
             <div id="commandLineMobileButton">
                     <i class="fas fa-terminal"></i>
                 </div>
                 <div class="keyTips">
-                    <key>tab</key>
-                    +
-                    <key>enter</key>
-                    - restart test
+                    <key>tab</key> + <key>enter</key> - restart test
                     <br />
-                    <key>esc</key>
-                    or
-                    <key>ctrl</key>
-                    +
-                    <key>shift</key>
-                    +
-                    <key>p</key>
-                    - command line
+                    <key>esc</key> or <key>ctrl</key> + <key>shift</key> + <key>p</key> - command line
                 </div>
                 <div class="leftright">
                     <div class="left">

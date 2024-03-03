@@ -266,3 +266,192 @@ key {
     align-items: baseline;
     justify-content: center
 }
+
+.textButton:hover{
+    color: var(--text-color)
+}
+
+main {
+    display: grid;
+    grid-template-rows: minmax(200px, auto) 1fr;
+}
+
+/* #testConfig {
+    display: grid;
+    font-size: .75rem;
+    gap: .5rem;
+    grid-auto-flow: column;
+    height: -moz-max-content;
+    height: max-content;
+    width: 100%;
+    transition: opacity .125s;
+    justify-content: space-around;
+    margin-bottom: 1rem
+}
+
+#testConfig .puncAndNum {
+    overflow: hidden;
+    max-width: 15rem;
+    opacity: 1
+}
+
+#testConfig .row {
+    display: flex;
+    background: var(--sub-color);
+    border-radius: var(--roundness)
+}
+
+#testConfig .spacer {
+    height: auto;
+    width: .25rem;
+    border-radius: calc(var(--roundness)/2);
+    background: var(--background-color);
+    margin: .5rem 0
+}
+
+#testConfig .spacer.scrolled {
+    width: 0;
+    margin: auto 0
+}
+
+#testConfig .wordCount .textButton,
+#testConfig .time .textButton {
+    line-height: 1rem
+}
+
+#testConfig .wordCount .textButton span,
+#testConfig .time .textButton span {
+    height: 1.1em
+}
+
+#testConfig .mode,
+#testConfig .time,
+#testConfig .wordCount,
+#testConfig .puncAndNum,
+#testConfig .quoteLength,
+#testConfig .customText,
+#testConfig .zen {
+    display: grid;
+    grid-auto-flow: column
+}
+
+#testConfig .mode .textButton,
+#testConfig .time .textButton,
+#testConfig .wordCount .textButton,
+#testConfig .puncAndNum .textButton,
+#testConfig .quoteLength .textButton,
+#testConfig .customText .textButton,
+#testConfig .zen .textButton {
+    padding: .75rem .5rem .7rem
+}
+
+#testConfig .mode .textButton:first-child,
+#testConfig .time .textButton:first-child,
+#testConfig .wordCount .textButton:first-child,
+#testConfig .puncAndNum .textButton:first-child,
+#testConfig .quoteLength .textButton:first-child,
+#testConfig .customText .textButton:first-child,
+#testConfig .zen .textButton:first-child {
+    padding: .75rem .5rem .7rem 1rem
+}
+
+#testConfig .mode .textButton:last-child,
+#testConfig .time .textButton:last-child,
+#testConfig .wordCount .textButton:last-child,
+#testConfig .puncAndNum .textButton:last-child,
+#testConfig .quoteLength .textButton:last-child,
+#testConfig .customText .textButton:last-child,
+#testConfig .zen .textButton:last-child {
+    padding: .75rem 1rem .7rem .5rem
+}
+
+#testConfig .mode .textButton:only-child,
+#testConfig .time .textButton:only-child,
+#testConfig .wordCount .textButton:only-child,
+#testConfig .puncAndNum .textButton:only-child,
+#testConfig .quoteLength .textButton:only-child,
+#testConfig .customText .textButton:only-child,
+#testConfig .zen .textButton:only-child {
+    padding: .75rem 1rem .7rem
+}
+
+#testConfig .time,
+#testConfig .wordCount,
+#testConfig .customText,
+#testConfig .zen,
+#testConfig .quoteLength,
+#testConfig .puncAndNum {
+    justify-content: center;
+    overflow: hidden
+}
+
+#testConfig .customText {
+    display: grid
+}
+ */
+main {
+    display: grid;
+    grid-template-rows: minmax(200px, auto) 1fr;
+}
+
+/* Start Test Configuration Section Styling  */
+main .test-config {
+    background-color: var(--sub-color);
+    display: flex;
+    font-size: 12px;
+    width: 750px;
+    margin: 20px auto 0;
+    padding: 10px;
+    border-radius: 6px;
+    color: var(--text-alt-color);
+}
+
+main .test-config.hide {
+    display: none;
+}
+
+main .test-config .config {
+    display: flex;
+    flex-basis: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+main .test-config .config .button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main .test-config .spelter {
+    width: 4px;
+    height: 20px;
+    margin: 0 10px;
+    background-color: #323437;
+}
+
+main .test-config .config input {
+    appearance: none;
+}
+
+main .test-config .config label {
+    cursor: pointer;
+    transition: all .3s;
+}
+
+main .test-config .config label:hover {
+    color: var(--text-color);
+}
+
+main .test-config .config input:checked+label {
+    color: var(--main-color);
+}
+
+main .time-word-config.time label::after {
+    content: 's';
+}
+
+#custom{
+    margin-left: 15px;
+}
