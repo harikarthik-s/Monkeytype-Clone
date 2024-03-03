@@ -78,7 +78,6 @@ header .logo h1 {
     font-size: 1.9rem;
     margin-top: -8px;
     position: relative;
-    letter-spacing: 1px;
     font-family: Lexend Deca, sans-serif;
     font-weight: 550;
 }
@@ -106,6 +105,10 @@ nav{
     width: 100%;
     grid-template-columns: auto auto auto auto 1fr auto;
     margin-left: .7rem;
+}
+
+nav i:hover {
+color: var(--text-color);
 }
 
 footer {
@@ -188,6 +191,11 @@ footer .leftright .right .textButton {
     width: max-content
 }
 
+footer .leftright .left .textButton:hover,
+footer .leftright .right .textButton:hover {
+    color: var(--text-color);
+}
+
 footer .currentVersion {
     display: flex
 }
@@ -245,16 +253,11 @@ key {
     border-radius: var(--roundness);
     background: 0 0;
     text-align: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
     user-select: none;
     align-content: center;
     height: -moz-min-content;
     height: min-content;
     line-height: 1.25;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     border: none;
     font-family: inherit;
     font-size: 1em;
