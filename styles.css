@@ -8,6 +8,7 @@
     --sub-color: #2c2e31;
     --sub-alt-color: #646669;
     --error-color: #da3333;
+    --spelter-color: #323437;
     --roundness: .5rem;
     --font: "Roboto Mono", "Vazirmatn", monospace;
     scroll-padding-top: 2rem;
@@ -22,6 +23,7 @@
     --sub-color: #d1d3d9;
     --sub-alt-color: #aaaeb2;
     --error-color: #FA1616;
+    --spelter-color: #e1e1e3;
 }
 
 @font-face {
@@ -278,12 +280,7 @@ key {
 
 main {
     display: grid;
-    grid-template-rows: minmax(200px, auto) 1fr;
-}
-
-main {
-    display: grid;
-    grid-template-rows: minmax(200px, auto) 1fr;
+    grid-template-rows: minmax(150px, auto) 30px 1fr;
 }
 
 main .test-config {
@@ -307,6 +304,7 @@ main .test-config .config {
     justify-content: space-evenly;
     align-items: center;
     gap: 10px;
+    margin-left: .35rem;
 }
 
 main .test-config .config .button {
@@ -319,7 +317,7 @@ main .test-config .spelter {
     width: 4px;
     height: 20px;
     margin: 0 10px;
-    background-color: #323437;
+    background-color: var(--spelter-color);
 }
 
 main .test-config .config input {
@@ -345,4 +343,171 @@ main .time-word-config.time label::after {
 
 #custom{
     margin-left: 15px;
+}
+
+main .test-results {
+    margin: 20px auto 30px;
+    width: 420px;
+    display: none;
+}
+
+main .test-results.show {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .test-results .result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .test-results .result .result-value {
+    color: var(--main-color);
+}
+
+main .test-results .result .result-head {
+    font-size: 16px;
+}
+
+main .test-results .result.big-text .result-head {
+    font-size: 28px;
+}
+
+main .test-results .result.big-text .result-value {
+    font-size: 48px;
+}
+
+main .test-results .test-type {
+    display: flex;
+    flex-direction: column;
+}
+
+main .typing-test {
+    font-size: 24px;
+    color: var(--text-alt-color);
+}
+
+#testModesNotice {
+    display: flex;
+    height: 10px;
+    flex-wrap: wrap;
+    color: var(--sub-color);
+    text-align: center;
+    transition: opacity .125s;
+    justify-content: center;
+    -webkit-user-select: none;
+    user-select: none;
+
+}
+main .typing-test .time-word-info {
+    color: var(--main-color);
+    margin-bottom: 10px;
+    min-height: 32px;
+}
+
+main .typing-test .test {
+    position: relative;
+}
+
+main .typing-test .test-text {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+main .typing-test .test .word {
+    display: flex;
+}
+
+main .typing-test .test .letter {
+    min-width: 1ch;
+    display: inline-block;
+    border-left: 2px solid transparent;
+}
+
+main .typing-test .test .letter.last {
+    min-width: 1ch;
+    display: inline-block;
+    border: none;
+    margin-left: 2px;
+    border-right: 2px solid transparent;
+}
+
+main .typing-test .test.shadow {
+    color: transparent;
+    text-shadow: 0 0 5px rgb(100, 102, 105, 0.5);
+}
+
+main .typing-test .test .letter.cursor {
+    border-color: var(--main-color);
+    animation: blinker 1s linear infinite;
+}
+
+
+main .typing-test .test .letter.correct {
+    color: var(--text-color);
+}
+
+main .typing-test .test .letter.wrong {
+    color: var(--error-color);
+}
+
+main .typing-test .test .letter.wrong-space {
+    background-color: var(--error-color);
+}
+
+main .typing-test .test .letter.updated {
+    color: var(--main-color);
+}
+
+main .typing-test .test .letter.updated-space {
+    background-color: var(--main-color);
+}
+
+main .typing-test .test .overlay {
+    color: var(--text-color);
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 18px;
+}
+
+main .typing-test .test .overlay.hide {
+    display: none;
+}
+
+#restartTestButton {
+    margin: 1rem auto 0;
+    display: flex;
+    padding: 1em 2em;
+    border: none;
+    background-color: var(--background-color);
+    color: var(--sub-alt-color);
+    transition: none;
+}
+
+#restartTestButton i{
+    cursor: pointer;
+}
+
+@keyframes blinker {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media (max-width:991px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
 }
