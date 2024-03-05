@@ -27,3 +27,4 @@ window.addEventListener("DOMContentLoaded", () => {
     logoImage.src = "assets/logo-light-mode.svg";
   }
 });
+
