@@ -342,8 +342,9 @@ main .time-word-config.time label::after {
 }
 
 #custom{
-    margin-left: 15px;
+    margin-left: 0px;
 }
+
 
 main .test-results {
     margin: 20px auto 30px;
