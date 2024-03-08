@@ -45,7 +45,6 @@ function setUpTestConfigurationContainer() {
 }
 
 
-// Queries
 const typingTest = document.querySelector(".typing-test");
 const testContainer = document.querySelector(".test");
 const testText = document.querySelector(".test-text");
@@ -54,7 +53,6 @@ const startingTextContainer = document.querySelector(".starting-text");
 const testResult = document.querySelector(".test-results");
 const testInfo = document.querySelector(".time-word-info");
 
-// Globals
 const punctuation = `+",.-'"&!?:;#~=/$^()_<>`;
 const letters = "abcdefghijklmnopqrstuvwxyz";
 let testWords = [];
