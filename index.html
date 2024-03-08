@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MonkeyType</title>
-    <link rel="stylesheet" href= "./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <link
       rel="shortcut icon"
       href="./assets/img/favicon.ico"
@@ -26,7 +26,9 @@
           <h1>monkeytype</h1>
         </div>
         <nav>
-          <div><i class="fa-solid fa-keyboard"></i></div>
+          <div id="startBtn" title="start test">
+            <i class="fa-solid fa-keyboard"></i>
+          </div>
           <div><i class="fas fa-fw fa-crown"></i></div>
           <div><i class="fas fa-fw fa-info"></i></div>
           <div><i class="fas fa-fw fa-cog"></i></div>
@@ -34,6 +36,7 @@
           <div><i class="fas fa-fw fa-bell"></i></div>
           <div><i class="fa-regular fa-user"></i></div>
         </nav>
+        <input type="text" name="user-input" id="userInput" value="" />
       </header>
       <main>
         <div class="test-config-result">
@@ -46,7 +49,9 @@
                   name="include-to-test"
                   value="punctuation"
                 />
-                <label for="punctuation"><i class="fa-solid fa-at"></i> punctuation</label>
+                <label for="punctuation"
+                  ><i class="fa-solid fa-at"></i> punctuation</label
+                >
               </div>
               <div class="button">
                 <input
@@ -184,9 +189,9 @@
             </div>
             <div class="test-text"></div>
           </div>
-          <button id="restartTestButton" class="text">
+          <!-- <button id="restartTestButton" class="text">
             <i class="fas fa-fw fa-redo-alt"></i>
-          </button>
+          </button> -->
         </div>
       </main>
 
@@ -266,8 +271,8 @@
         </div>
       </footer>
     </div>
-    <script src=".assets/js/script.js"></script>
-    <script src=".assets/js/app.js"></script>
-    <script src=".assets/js/test.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/app.js" type="module"></script>
+    <script src="./assets/js/test.js" type="module"></script>
   </body>
 </html>

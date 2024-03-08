@@ -287,7 +287,7 @@ main .test-config {
     background-color: var(--sub-color);
     display: flex;
     font-size: 12px;
-    width: 750px;
+    width: 800px;
     margin: 20px auto 0;
     padding: 10px;
     border-radius: 6px;
@@ -304,7 +304,7 @@ main .test-config .config {
     justify-content: space-evenly;
     align-items: center;
     gap: 10px;
-    margin-left: .35rem;
+    margin-left: .65rem;
 }
 
 main .test-config .config .button {
@@ -497,6 +497,20 @@ main .typing-test .test .overlay.hide {
 
 #restartTestButton i{
     cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+#userInput {
+    opacity: 0;
+    position: absolute;
+    z-index: -100;
+}
+
+.no-click {
+    pointer-events: none;
 }
 
 @keyframes blinker {
