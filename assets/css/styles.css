@@ -341,10 +341,9 @@ main .time-word-config.time label::after {
     content: 's';
 }
 
-#custom{
-    margin-left: 0px;
+#tools{
+    margin-left: 20px;
 }
-
 
 main .test-results {
     margin: 20px auto 30px;
