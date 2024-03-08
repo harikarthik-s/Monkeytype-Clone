@@ -30,8 +30,6 @@ function handleTestConfigChange(e) {
 
     testConfig = { ...testConfig, [name]: checkedBoxesValue };
   }
-
-  // Update test configuration container
   setUpTestConfigurationContainer();
 }
 
