@@ -1,6 +1,6 @@
 # Monkeytype Clone
 
-A full-stack Monkeytype clone made using React, TypeScript, and Vite. Test your typing speed in a 30-second, 60-second,... format also in number of words format.
+A full-stack Monkeytype clone made using vanillaJS and libraries. Test your typing speed in a 30-second, 60-second,... format also in number of words format.
 
 ## Features
 
